@@ -4,16 +4,18 @@ End Sub
 
 
 Private partNumber As String
+Private firstLetter As Char
 
 Public Sub PublishPDF()
 	
 	' Ask for part number. By default file name will be shown
 	partNumber = InputBox("Part Number: ", "Save File as PDF", iProperties.Value("Project", "Part Number"))
-	
+		
 	If partNumber Is "" Then
 		MessageBox.Show("Canceled", "Cancel")
 		Exit Sub
 	Else
+		firstLetter = partNumber.Substring(0,1)
 		savePdfInTheBFolder()
 	End If
     
@@ -53,7 +55,7 @@ Function savePdfInTheBFolder()
     End If
 
     'Set the destination file name
-    oDataMedium.FileName = "P:\S_Works-Dwgs\B---\" & partNumber &".pdf"
+    oDataMedium.FileName = "P:\S_Works-Dwgs\" & firstLetter &"---\" & partNumber &".pdf"
 
     'Publish document.
     Call PDFAddIn.SaveCopyAs(oDocument, oContext, oOptions, oDataMedium)
