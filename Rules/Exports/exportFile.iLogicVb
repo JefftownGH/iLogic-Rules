@@ -1,0 +1,62 @@
+﻿Public Sub Main()
+	PublishPDF()
+End Sub
+
+
+Private partNumber As String
+
+Public Sub PublishPDF()
+	
+	' Ask for part number. By default file name will be shown
+	partNumber = InputBox("Part Number: ", "Save File as PDF", iProperties.Value("Project", "Part Number"))
+	
+	If partNumber Is "" Then
+		MessageBox.Show("Canceled", "Cancel")
+		Exit Sub
+	Else
+		savePdfInTheBFolder()
+	End If
+    
+End Sub
+
+Function savePdfInTheBFolder()
+' Get the PDF translator Add-In.
+    Dim PDFAddIn As TranslatorAddIn
+    PDFAddIn = ThisApplication.ApplicationAddIns.ItemById("{0AC6FD96-2F4D-42CE-8BE0-8AEA580399E4}")
+
+    'Set a reference to the active document (the document to be published).
+    Dim oDocument As Document
+    oDocument = ThisApplication.ActiveDocument
+
+    Dim oContext As TranslationContext
+    oContext = ThisApplication.TransientObjects.CreateTranslationContext
+    oContext.Type = kFileBrowseIOMechanism
+
+    ' Create a NameValueMap object
+    Dim oOptions As NameValueMap
+    oOptions = ThisApplication.TransientObjects.CreateNameValueMap
+
+    ' Create a DataMedium object
+    Dim oDataMedium As DataMedium
+    oDataMedium = ThisApplication.TransientObjects.CreateDataMedium
+
+    ' Check whether the translator has 'SaveCopyAs' options
+    If PDFAddIn.HasSaveCopyAsOptions(oDocument, oContext, oOptions) Then
+
+        ' Options for drawings...
+        'oOptions.Value("All_Color_AS_Black") = 0
+        'oOptions.Value("Remove_Line_Weights") = 0
+        'oOptions.Value("Vector_Resolution") = 400
+        oOptions.Value("Sheet_Range") = Inventor.PrintRangeEnum.kPrintAllSheets
+        'oOptions.Value("Custom_Begin_Sheet") = 1
+        'oOptions.Value("Custom_End_Sheet") = 2
+    End If
+
+    'Set the destination file name
+    oDataMedium.FileName = "P:\S_Works-Dwgs\B---\" & partNumber &".pdf"
+
+    'Publish document.
+    Call PDFAddIn.SaveCopyAs(oDocument, oContext, oOptions, oDataMedium)
+	
+	MessageBox.Show(" Your drawing has been saved as PDF in the B folder ", " Saved PDF ")
+End Function 

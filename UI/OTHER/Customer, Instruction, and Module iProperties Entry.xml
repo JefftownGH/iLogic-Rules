@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Customer, Instruction, and Module iProperties Entry</Name>
+  <Font>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </Font>
+  <ContentsFont>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </ContentsFont>
+  <ContentsTextLocation>Left</ContentsTextLocation>
+  <Items>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>Part Number</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Part Number</PropertyName>
+      <PropertySetName>Project</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>Description</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Description</PropertyName>
+      <PropertySetName>Project</PropertySetName>
+    </UiElementSpec>
+  </Items>
+  <StyleAndSkinName>
+    <StyleName>Default</StyleName>
+  </StyleAndSkinName>
+  <AllowCustomization>true</AllowCustomization>
+  <PredefinedButtons>Done</PredefinedButtons>
+  <Modal>false</Modal>
+  <ItemBordersVisible>false</ItemBordersVisible>
+  <IsLauncherPage>false</IsLauncherPage>
+  <ShowOnPlaceComponent>false</ShowOnPlaceComponent>
+  <Guid>9af4f596-59c7-4d9c-bd94-9889d15856e9</Guid>
+</FormSpecification>

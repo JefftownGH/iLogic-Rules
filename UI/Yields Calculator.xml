@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Yields Calculator</Name>
+  <Font>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </Font>
+  <ContentsFont>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </ContentsFont>
+  <ContentsTextLocation>Left</ContentsTextLocation>
+  <Items>
+    <UiElementSpec xsi:type="LabelSpec">
+      <Name>   Yields Calculator</Name>
+      <Font>
+        <FamilyName>TechnicLite</FamilyName>
+        <Size>12.7499981</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="ControlGroupSpec">
+      <Name>Sheet Size</Name>
+      <Font>
+        <FamilyName>Technic</FamilyName>
+        <Size>9</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <ContentsFont>
+        <FamilyName>Technic</FamilyName>
+        <Size>9</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </ContentsFont>
+      <ContentsTextLocation>Left</ContentsTextLocation>
+      <Items>
+        <UiElementSpec xsi:type="NumericPropertyControlSpec">
+          <Name>Width:</Name>
+          <Font>
+            <FamilyName>Technic</FamilyName>
+            <Size>9</Size>
+            <Bold>false</Bold>
+            <Italic>false</Italic>
+          </Font>
+          <TextLocation>Left</TextLocation>
+          <ReadOnly>false</ReadOnly>
+          <AlwaysReadOnly>false</AlwaysReadOnly>
+          <PropertyName>SheetWidth</PropertyName>
+          <PropertySetName>Custom</PropertySetName>
+        </UiElementSpec>
+        <UiElementSpec xsi:type="NumericPropertyControlSpec">
+          <Name>Length:</Name>
+          <Font>
+            <FamilyName>Technic</FamilyName>
+            <Size>9</Size>
+            <Bold>false</Bold>
+            <Italic>false</Italic>
+          </Font>
+          <TextLocation>Left</TextLocation>
+          <ReadOnly>false</ReadOnly>
+          <AlwaysReadOnly>false</AlwaysReadOnly>
+          <PropertyName>SheetLength</PropertyName>
+          <PropertySetName>Custom</PropertySetName>
+        </UiElementSpec>
+      </Items>
+      <CaptionImage>
+        <BitmapByteArray />
+      </CaptionImage>
+      <BordersVisible>true</BordersVisible>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="EmptySpaceSpec">
+      <Name>Empty Space 1</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <MinimumWidth>0</MinimumWidth>
+      <MaximumWidth>0</MaximumWidth>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="iLogicExternalRuleControlSpec">
+      <Name>Bystronic</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <Image>
+        <BitmapByteArray />
+      </Image>
+      <TextVisible>true</TextVisible>
+      <RuleName>bystronic</RuleName>
+      <RuleButtonBehavior>RunRule</RuleButtonBehavior>
+      <Path>N:\eng product development\Style Library Manager- Do Not Update\iLogic\Rules\Yield Calculator\bystronic.iLogicVb</Path>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="iLogicExternalRuleControlSpec">
+      <Name>Turrets</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <Image>
+        <BitmapByteArray />
+      </Image>
+      <TextVisible>true</TextVisible>
+      <RuleName>turrets</RuleName>
+      <RuleButtonBehavior>RunRule</RuleButtonBehavior>
+      <Path>N:\eng product development\Style Library Manager- Do Not Update\iLogic\Rules\Yield Calculator\turrets.iLogicVb</Path>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="iLogicExternalRuleControlSpec">
+      <Name>Mazak</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <Image>
+        <BitmapByteArray />
+      </Image>
+      <TextVisible>true</TextVisible>
+      <RuleName>mazak</RuleName>
+      <RuleButtonBehavior>RunRule</RuleButtonBehavior>
+      <Path>N:\eng product development\Style Library Manager- Do Not Update\iLogic\Rules\Yield Calculator\mazak.iLogicVb</Path>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="EmptySpaceSpec">
+      <Name>Empty Space 2</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <MinimumWidth>0</MinimumWidth>
+      <MaximumWidth>0</MaximumWidth>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="ControlGroupSpec">
+      <Name>Old Parts Only (For Parts Created before 01/15)</Name>
+      <Font>
+        <FamilyName>Technic</FamilyName>
+        <Size>9</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <ContentsFont>
+        <FamilyName>Technic</FamilyName>
+        <Size>9</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </ContentsFont>
+      <ContentsTextLocation>Left</ContentsTextLocation>
+      <Items>
+        <UiElementSpec xsi:type="iLogicExternalRuleControlSpec">
+          <Name>Prepare Part</Name>
+          <Font>
+            <FamilyName>Technic</FamilyName>
+            <Size>9</Size>
+            <Bold>false</Bold>
+            <Italic>false</Italic>
+          </Font>
+          <TextLocation>Left</TextLocation>
+          <Image>
+            <BitmapByteArray />
+          </Image>
+          <TextVisible>true</TextVisible>
+          <RuleName>preparePartForYieldsCalculation</RuleName>
+          <RuleButtonBehavior>RunRule</RuleButtonBehavior>
+          <Path>N:\eng product development\Style Library Manager- Do Not Update\iLogic\Rules\Yield Calculator\preparePartForYieldsCalculation.iLogicVb</Path>
+        </UiElementSpec>
+      </Items>
+      <CaptionImage>
+        <BitmapByteArray />
+      </CaptionImage>
+      <BordersVisible>true</BordersVisible>
+    </UiElementSpec>
+  </Items>
+  <StyleAndSkinName>
+    <StyleName>Default</StyleName>
+  </StyleAndSkinName>
+  <AllowCustomization>true</AllowCustomization>
+  <PredefinedButtons>Done</PredefinedButtons>
+  <Modal>false</Modal>
+  <ItemBordersVisible>false</ItemBordersVisible>
+  <IsLauncherPage>false</IsLauncherPage>
+  <ShowOnPlaceComponent>false</ShowOnPlaceComponent>
+  <Guid>692d134a-fe40-4568-9598-d939da096737</Guid>
+</FormSpecification>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Revision Update</Name>
+  <Font>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </Font>
+  <ContentsFont>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </ContentsFont>
+  <ContentsTextLocation>Left</ContentsTextLocation>
+  <Items>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>ECN NO.</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Stock Number</PropertyName>
+      <PropertySetName>Project</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>REVISION DESCRIPTION</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Status</PropertyName>
+      <PropertySetName>Status</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>Eng. Approved By</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Eng. Approved By</PropertyName>
+      <PropertySetName>Status</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="DatePropertyControlSpec">
+      <Name>Eng. Approved Date</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Eng. Approved Date</PropertyName>
+      <PropertySetName>Status</PropertySetName>
+    </UiElementSpec>
+  </Items>
+  <StyleAndSkinName>
+    <StyleName>Default</StyleName>
+  </StyleAndSkinName>
+  <AllowCustomization>true</AllowCustomization>
+  <PredefinedButtons>Done</PredefinedButtons>
+  <Modal>false</Modal>
+  <ItemBordersVisible>false</ItemBordersVisible>
+  <IsLauncherPage>false</IsLauncherPage>
+  <ShowOnPlaceComponent>false</ShowOnPlaceComponent>
+  <Guid>48f727cc-c210-4c62-9751-f0c6422908d7</Guid>
+</FormSpecification>

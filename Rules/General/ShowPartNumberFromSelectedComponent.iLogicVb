@@ -1,0 +1,35 @@
+﻿
+' CREATED BY: Filemon Salas
+' DATE: 01/2015
+' LICENSE: Free
+ 
+Sub Main()
+	
+	doc = ThisDoc.Document
+
+	If (doc.DocumentType = DocumentTypeEnum.kAssemblyDocumentObject) Then
+
+		'MessageBox.Show("This is an Assembly file.","Information",MessageBoxButtons.OK , MessageBoxIcon.Information)
+		Dim oOccurrence As ComponentOccurrence
+		Dim Prop As String
+
+		Try
+			oOccurrence = ThisDoc.Document.SelectSet.Item(1)
+		Catch
+			MessageBox.Show("No component was selected. Select a component.", "iLogic")
+        			Return
+		End Try
+
+		If TypeOf oOccurrence Is ComponentOccurrenceProxy Then
+			Prop = iProperties.Value(oOccurrence.NativeObject.Name, "Project", "Part Number")
+		Else
+			Prop = iProperties.Value(oOccurrence.Name, "Project", "Part Number")
+		End If
+			MessageBox.Show(Prop) 
+
+	Else
+		MessageBox.Show("This is not an assembly file.","Information",MessageBoxButtons.OK , MessageBoxIcon.Information)
+		Return
+	End If
+
+End Sub 

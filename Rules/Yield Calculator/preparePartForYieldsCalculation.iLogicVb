@@ -1,0 +1,21 @@
+﻿
+' CREATED BY: Filemon Salas
+' DATE: 01/2015
+' LICENSE: Free
+ 
+Sub Main()
+	
+	doc = ThisDoc.Document
+	If (doc.DocumentType = DocumentTypeEnum.kPartDocumentObject) Then 
+
+		iProperties.Value("Custom","SheetWidth") = 60
+		iProperties.Value("Custom","SheetLength") = 120
+		
+		MessageBox.Show("Your part has been configured. The yields calculator can now be used in this part.") 
+		
+	Else 
+			MessageBox.Show("This is not a PART file.","Information",MessageBoxButtons.OK , MessageBoxIcon.Information)
+		Return
+	End If
+
+End Sub 

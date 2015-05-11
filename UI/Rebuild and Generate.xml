@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Rebuild and Generate</Name>
+  <Font>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </Font>
+  <ContentsFont>
+    <Size>0</Size>
+    <Bold>false</Bold>
+    <Italic>false</Italic>
+  </ContentsFont>
+  <ContentsTextLocation>Left</ContentsTextLocation>
+  <Items>
+    <UiElementSpec xsi:type="SplitterSpec">
+      <Name>Splitter 1</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="SplitterSpec">
+      <Name>Splitter 2</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="iLogicExternalRuleControlSpec">
+      <Name>Rebuild and Generate Members</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <Image>
+        <BitmapByteArray />
+      </Image>
+      <TextVisible>true</TextVisible>
+      <RuleName>RebuildFileAndGenerateMembers</RuleName>
+      <RuleButtonBehavior>RunRule</RuleButtonBehavior>
+      <Path>N:\eng product development\Style Library Manager- Do Not Update\iLogic\Rules\General\RebuildFileAndGenerateMembers.iLogicVb</Path>
+    </UiElementSpec>
+  </Items>
+  <StyleAndSkinName>
+    <StyleName>Default</StyleName>
+  </StyleAndSkinName>
+  <AllowCustomization>true</AllowCustomization>
+  <PredefinedButtons>Done</PredefinedButtons>
+  <Modal>false</Modal>
+  <ItemBordersVisible>false</ItemBordersVisible>
+  <IsLauncherPage>false</IsLauncherPage>
+  <ShowOnPlaceComponent>false</ShowOnPlaceComponent>
+  <Guid>ec9bdca1-12e6-4530-8223-930a4beb5481</Guid>
+</FormSpecification>

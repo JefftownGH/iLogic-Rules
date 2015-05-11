@@ -1,0 +1,137 @@
+
+' CREATED BY: Filemon Salas
+' DATE: 12/2014
+' LICENSE: Free
+
+Sub Main()
+
+	doc = ThisDoc.ModelDocument
+	Const MACHINENAME As String = "T U R R E T S "
+
+	If doc.documentType = kPartDocumentObject Then
+
+		sheetWidth= iProperties.Value("Custom", "SheetWidth")
+		sheetLength= iProperties.Value("Custom", "SheetLength")
+		sheetTotalAvailableWidth = sheetWidth - (CLAMP + WEB)
+		sheetTotalAvailableLength = sheetLength - (WEB * 2)
+	
+		Dim calculationX As Integer = calculatePartsHorizontally()
+		Dim calculationY As Integer = calculatePartsVartically()
+		
+		Dim totalYields As Double
+	
+		If calculationX >= calculationY Then
+		
+			totalYields = Math.Round (1 / calculationX, 8)
+			
+			MessageBox.Show( MACHINENAME + vbCrLf + vbCrLf + _
+			"Yields : " + CStr(totalYields)  + vbCrLf + _
+			"Parts  : " + CStr(calculationX) , "Yields X")
+			
+			Clipboard.SetText(CStr(totalYields))
+		Else
+			totalYields = Math.Round (1 / calculationY, 8)
+			
+			MessageBox.Show( MACHINENAME + vbCrLf + vbCrLf + _
+			"Yields : " + CStr(totalYields)  + vbCrLf + _
+			"Parts  : " + CStr(calculationY) , "Yields Y")
+			
+			Clipboard.SetText(CStr(totalYields))
+
+		End If
+	Else 
+		MessageBox.Show("Sorry but this AWESOME calculator works only with Sheet Metal parts, not with assemblies!", _
+	"Yield Calculator",MessageBoxButtons.Ok, MessageBoxIcon.Exclamation)
+	End If
+
+End Sub
+
+
+Private Const KERF As Double = .250
+Private Const WEB As Double = .750
+Private Const CLAMP As Double = 3.000
+
+Private sheetWidth As Integer
+Private sheetLength As Integer
+Private sheetTotalAvailableWidth As Double
+Private sheetTotalAvailableLength As Double
+
+Function calculatePartsHorizontally() As Integer
+
+	Dim partWidth As Double = SheetMetal.FlatExtentsWidth
+	Dim partLength As Double = SheetMetal.FlatExtentsLength
+	
+	Dim partWidthPlus As Double = partWidth + KERF
+	Dim partLengthPlus As Double = partLength + KERF
+
+	Dim partsY As Double  = sheetTotalAvailableWidth / partWidthPlus
+	Dim partsX As Double = sheetTotalAvailableLength / partLengthPlus
+
+	Dim partsYasInt As Integer = Int(partsY)
+	Dim partsXasInt As Integer = Int(partsX)
+
+	Dim totalSheetUsageX As Double = partsXasInt * partLengthPlus
+	Dim totalSheetUsageY As Double = partsYasInt * partWidthPlus
+	
+	Dim extraMaterialOnXdirection As Double = sheetTotalAvailableLength - totalSheetUsageX
+
+	If extraMaterialOnXdirection > partWidthPlus And PartLengthPlus < sheetTotalAvailableWidth Then	
+		
+		Dim extraPartsOnX As Double = extraMaterialOnXdirection / partWidthPlus
+		Dim extraPartsOnY As Double = sheetTotalAvailableWidth / partLengthPlus
+		Dim totalExtraParts As Integer = Int(extraPartsOnX) * Int(extraPartsOnY)
+		
+		Dim totalParts As Integer = partsXasInt * partsYasInt
+		
+		Dim totalPartsPlus As Integer = totalExtraParts + totalParts
+		Return totalPartsPlus
+		
+	
+	Else
+	
+		Dim totalParts As Integer = partsXasInt * partsYasInt		
+		Return totalParts	
+	End If
+	
+End Function
+
+Function calculatePartsVartically() As Integer
+
+	Dim partWidth As Double = SheetMetal.FlatExtentsWidth
+	Dim partLength As Double = SheetMetal.FlatExtentsLength
+	
+	Dim partWidthPlus As Double = partWidth + KERF
+	Dim partLengthPlus As Double = partLength + KERF
+
+	Dim partsY As Double  =  sheetTotalAvailableWidth / partLengthPlus
+	Dim partsX As Double = sheetTotalAvailableLength / partWidthPlus
+
+	Dim partsYasInt As Integer = Int(partsY)
+	Dim partsXasInt As Integer = Int(partsX)
+
+	Dim totalSheetUsageX As Double = partsXasInt * partWidthPlus
+	Dim totalSheetUsageY As Double = partsYasInt * partLengthPlus
+	
+	Dim extraMaterialOnYdirection As Double = sheetTotalAvailableWidth - totalSheetUsageY
+
+	If extraMaterialOnYdirection > partWidthPlus Then	
+		
+		Dim extraPartsOnY As Double = extraMaterialOnYdirection / partWidthPlus
+		Dim extraPartsOnX As Double = sheetTotalAvailableLength / partLengthPlus
+		Dim totalExtraParts As Integer = Int(extraPartsOnX) * Int(extraPartsOnY)
+		Dim totalParts As Integer = partsXasInt * partsYasInt
+		
+		Dim totalPartsPlus As Integer = totalExtraParts + totalParts
+		Return totalPartsPlus
+
+	Else
+	
+		Dim totalParts As Integer = partsXasInt * partsYasInt	
+		Return totalParts
+		
+	End If
+	
+End Function
+
+
+

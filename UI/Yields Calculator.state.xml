@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStatePersist xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Size>
+    <Width>319</Width>
+    <Height>447</Height>
+  </Size>
+  <Location>
+    <X>734</X>
+    <Y>223</Y>
+  </Location>
+  <SplitterLocations />
+</FormStatePersist>
