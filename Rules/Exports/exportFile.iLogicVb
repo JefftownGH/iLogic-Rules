@@ -10,6 +10,11 @@ Public Sub PublishPDF()
 	' Ask for part number. By default file name will be shown
 	partNumber = InputBox("Part Number: ", "Save File as PDF", iProperties.Value("Project", "Part Number"))
 	
+	Dim firstLetter As Char
+	firstLetter = partNumber.Substring(0, 1)
+	
+	MessageBox.Show(firstLetter, "First String")
+	
 	If partNumber Is "" Then
 		MessageBox.Show("Canceled", "Cancel")
 		Exit Sub
