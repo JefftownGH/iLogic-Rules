@@ -44,7 +44,6 @@ Function saveAsPDF()
 
     ' Check whether the translator has 'SaveCopyAs' options
     If PDFAddIn.HasSaveCopyAsOptions(oDocument, oContext, oOptions) Then
-
         ' Options for drawings...
         oOptions.Value("All_Color_AS_Black") = 0
         oOptions.Value("Remove_Line_Weights") = 0
@@ -60,6 +59,11 @@ Function saveAsPDF()
 
     'Publish document.
     Call PDFAddIn.SaveCopyAs(oDocument, oContext, oOptions, oDataMedium)
-	
-	MessageBox.Show(" The file has been saved as PDF in the following directory: " & directoryPath & " ", " Saved PDF ")
+
+    'Open file
+    System.Diagnostics.Process.Start(directoryPath) 
+
+    'Show directory
+    MessageBox.Show(" The file has been saved as PDF in the following directory: " & directoryPath & " ", " Saved PDF ")
+
 End Function 
