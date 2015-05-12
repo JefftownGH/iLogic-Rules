@@ -55,10 +55,11 @@ Function saveAsPDF()
     End If
 
     'Set the destination file name
-    oDataMedium.FileName = "P:\S_Works-Dwgs\" & firstLetter &"---\" & partNumber &".pdf"
+    Dim directoryPath As String = "P:\S_Works-Dwgs\" & firstLetter &"---\" & partNumber &".pdf"
+    oDataMedium.FileName =  directoryPath
 
     'Publish document.
     Call PDFAddIn.SaveCopyAs(oDocument, oContext, oOptions, oDataMedium)
 	
-	MessageBox.Show(" Your drawing has been saved as PDF in the B folder ", " Saved PDF ")
+	MessageBox.Show(" The file has been saved as PDF in the following directory: " & directoryPath & " ", " Saved PDF ")
 End Function 
