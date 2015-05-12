@@ -1,0 +1,19 @@
+﻿ 
+' CREATED BY: Filemon Salas
+' DATE: 01/2015
+' LICENSE: Free
+ 
+Sub Main()
+	
+	doc = ThisDoc.Document
+	If (doc.DocumentType = DocumentTypeEnum.kPartDocumentObject) Then 
+
+		iProperties.Value("Custom","SheetWidth") = 60
+		iProperties.Value("Custom","SheetLength") = 120
+		
+	Else 
+	
+		Return
+	End If
+
+End Sub 
