@@ -2,7 +2,6 @@
 	PublishPDF()
 End Sub
 
-
 Private partNumber As String
 Private firstLetter As Char
 
@@ -60,10 +59,13 @@ Function saveAsPDF()
     'Publish document.
     Call PDFAddIn.SaveCopyAs(oDocument, oContext, oOptions, oDataMedium)
 
-    'Open file
-    System.Diagnostics.Process.Start(directoryPath) 
-
-    'Show directory
-    MessageBox.Show(" The file has been saved as PDF in the following directory: " & directoryPath & " ", " Saved PDF ")
+    'Show path and ask user if he/she wants to open the pdf
+    Dim openPdfFileDialogBox As Integer = MessageBox.Show(" The file has been saved as PDF in the following directory: " & directoryPath &  " " & vbCrLf & " " & vbCrLf & "   Do you want to open the file? "," File Saved ", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    If openPdfFileDialogBox = DialogResult.Yes Then
+        'Open file
+         System.Diagnostics.Process.Start(directoryPath) 
+    ElseIf result = DialogResult.No Then
+        Exit Function
+    End If
 
 End Function 
