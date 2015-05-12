@@ -22,7 +22,7 @@ Public Sub PublishPDF()
 End Sub
 
 Function savePdfInTheBFolder()
-' Get the PDF translator Add-In.
+	' Get the PDF translator Add-In.
     Dim PDFAddIn As TranslatorAddIn
     PDFAddIn = ThisApplication.ApplicationAddIns.ItemById("{0AC6FD96-2F4D-42CE-8BE0-8AEA580399E4}")
 
@@ -46,9 +46,9 @@ Function savePdfInTheBFolder()
     If PDFAddIn.HasSaveCopyAsOptions(oDocument, oContext, oOptions) Then
 
         ' Options for drawings...
-        'oOptions.Value("All_Color_AS_Black") = 0
-        'oOptions.Value("Remove_Line_Weights") = 0
-        'oOptions.Value("Vector_Resolution") = 400
+        oOptions.Value("All_Color_AS_Black") = 0
+        oOptions.Value("Remove_Line_Weights") = 0
+        oOptions.Value("Vector_Resolution") = 400
         oOptions.Value("Sheet_Range") = Inventor.PrintRangeEnum.kPrintAllSheets
         'oOptions.Value("Custom_Begin_Sheet") = 1
         'oOptions.Value("Custom_End_Sheet") = 2
