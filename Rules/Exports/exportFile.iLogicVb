@@ -1,4 +1,9 @@
-﻿Public Sub Main()
+﻿' CREATED BY: Filemon Salas
+' DATE: 05/2015
+' LICENSE: Free
+
+
+Public Sub Main()
 	PublishPDF()
 End Sub
 
