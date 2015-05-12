@@ -16,12 +16,12 @@ Public Sub PublishPDF()
 		Exit Sub
 	Else
 		firstLetter = partNumber.Substring(0,1)
-		savePdfInTheBFolder()
+		saveAsPDF()
 	End If
     
 End Sub
 
-Function savePdfInTheBFolder()
+Function saveAsPDF()
 	' Get the PDF translator Add-In.
     Dim PDFAddIn As TranslatorAddIn
     PDFAddIn = ThisApplication.ApplicationAddIns.ItemById("{0AC6FD96-2F4D-42CE-8BE0-8AEA580399E4}")
