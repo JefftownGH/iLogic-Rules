@@ -16,8 +16,8 @@ Sub Main
 	
 	If filelist.count > 0 Then
 		i = MessageBox.Show(filelist.count & " Read-Only file(s) found - Do you Want to Delete Them?" & vbLf & vbLf & _
-	 "Note: Make sure there are no files checked-out to you before deleting the read-only files." & vbLf & vbLf & _
-	 "It cannot be guaranteed that read-only files are actually checked into Vault and exist in the Vault database - only proceed if you are sure...", _
+	 "Note: Make sure there are no files checked-out to you before proceding." & vbLf & vbLf & _
+	 "It cannot be guaranteed that read-only files are actually checked into Vault and exist in the Vault database", _
 	  "Kenall iLogic",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
 	 	If i = vbNo Then
 	 		Return
