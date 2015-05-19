@@ -50,7 +50,8 @@
     </UiElementSpec>
   </Items>
   <StyleAndSkinName>
-    <StyleName>Default</StyleName>
+    <StyleName>Skin</StyleName>
+    <SkinName>DevExpress_Style</SkinName>
   </StyleAndSkinName>
   <AllowCustomization>true</AllowCustomization>
   <PredefinedButtons>Done</PredefinedButtons>
