@@ -37,7 +37,7 @@
       <PropertySetName>Project</PropertySetName>
     </UiElementSpec>
     <UiElementSpec xsi:type="TextPropertyControlSpec">
-      <Name>Description</Name>
+      <Name>Part Description</Name>
       <Font>
         <FamilyName />
         <Size>0</Size>
@@ -51,7 +51,7 @@
       <PropertySetName>Project</PropertySetName>
     </UiElementSpec>
     <UiElementSpec xsi:type="TextPropertyControlSpec">
-      <Name>Designer</Name>
+      <Name>Engineer</Name>
       <Font>
         <FamilyName />
         <Size>0</Size>
@@ -61,7 +61,35 @@
       <TextLocation>Left</TextLocation>
       <ReadOnly>false</ReadOnly>
       <AlwaysReadOnly>false</AlwaysReadOnly>
-      <PropertyName>Designer</PropertyName>
+      <PropertyName>Author</PropertyName>
+      <PropertySetName>Summary</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="TextPropertyControlSpec">
+      <Name>Revision Number</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Revision Number</PropertyName>
+      <PropertySetName>Project</PropertySetName>
+    </UiElementSpec>
+    <UiElementSpec xsi:type="DatePropertyControlSpec">
+      <Name>Date</Name>
+      <Font>
+        <FamilyName />
+        <Size>0</Size>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+      </Font>
+      <TextLocation>Left</TextLocation>
+      <ReadOnly>false</ReadOnly>
+      <AlwaysReadOnly>false</AlwaysReadOnly>
+      <PropertyName>Creation Date</PropertyName>
       <PropertySetName>Project</PropertySetName>
     </UiElementSpec>
     <UiElementSpec xsi:type="TextPropertyControlSpec">
@@ -133,7 +161,7 @@
     <SkinName>DevExpress_Style</SkinName>
   </StyleAndSkinName>
   <AllowCustomization>true</AllowCustomization>
-  <PredefinedButtons>Done</PredefinedButtons>
+  <PredefinedButtons>OkCancelApply</PredefinedButtons>
   <Modal>false</Modal>
   <ItemBordersVisible>false</ItemBordersVisible>
   <IsLauncherPage>false</IsLauncherPage>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FormStatePersist xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Size>
-    <Width>404</Width>
-    <Height>318</Height>
+    <Width>549</Width>
+    <Height>329</Height>
   </Size>
   <Location>
-    <X>498</X>
-    <Y>237</Y>
+    <X>827</X>
+    <Y>247</Y>
   </Location>
   <SplitterLocations />
 </FormStatePersist>
